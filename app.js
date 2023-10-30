@@ -40,15 +40,18 @@ app.use(
 );
 app.use(helmet());
 app.use(morgan('common'));
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(
+  cors({
+    origin:
+      'https://blogging-client-side-qjpe-g33leaoya-abdirisaq874.vercel.app/',
+    credentials: true,
+  })
+);
 app.use(xss());
 app.use(mongoSanitize());
 
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
-
-app.use(express.static('./public'));
-app.use(fileUpload());
 
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users', userRouter);
