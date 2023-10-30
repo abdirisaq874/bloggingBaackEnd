@@ -29,7 +29,7 @@ const register = async (req, res) => {
     role: RolesEnum.USER,
     verificationToken,
   });
-  const origin = 'https://blogging-client-side-qjpe.vercel.app';
+  const origin = 'https://blogginfrontend.azurewebsites.net';
   // const newOrigin = 'https://react-node-user-workflow-front-end.netlify.app';
 
   await sendVerificationEmail({
@@ -138,7 +138,7 @@ const forgotPassword = async (req, res) => {
   if (user) {
     const passwordToken = crypto.randomBytes(70).toString('hex');
     // send email
-    const origin = 'https://blogging-client-side-qjpe.vercel.app';
+    const origin = 'https://blogginfrontend.azurewebsites.net';
     await sendResetPasswordEmail({
       name: user.name,
       email: user.email,

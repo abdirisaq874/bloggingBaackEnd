@@ -42,7 +42,7 @@ app.use(helmet());
 app.use(morgan('common'));
 app.use(
   cors({
-    origin: 'https://blogging-client-side-qjpe.vercel.app',
+    origin: 'https://blogginfrontend.azurewebsites.net',
     credentials: true,
   })
 );
