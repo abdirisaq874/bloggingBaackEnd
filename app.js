@@ -42,8 +42,7 @@ app.use(helmet());
 app.use(morgan('common'));
 app.use(
   cors({
-    origin:
-      'https://blogging-client-side-qjpe-g33leaoya-abdirisaq874.vercel.app/',
+    origin: 'https://blogging-client-side-qjpe.vercel.app/',
     credentials: true,
   })
 );
