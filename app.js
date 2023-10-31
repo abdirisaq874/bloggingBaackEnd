@@ -42,7 +42,10 @@ app.use(helmet());
 app.use(morgan('common'));
 app.use(
   cors({
-    origin: 'https://blogginfrontend.azurewebsites.net',
+    origin: [
+      'https://blogginfrontend.azurewebsites.net',
+      'http://localhost:3000',
+    ],
     credentials: true,
   })
 );
