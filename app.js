@@ -41,7 +41,7 @@ app.use(helmet());
 app.use(morgan('common'));
 app.use(
   cors({
-    origin: ['https://mandeez.online', 'http://localhost:3000'],
+    origin: ['https://www.mandeez.online', 'http://localhost:3000'],
     credentials: true,
   })
 );
